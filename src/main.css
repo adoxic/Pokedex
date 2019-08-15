@@ -1,0 +1,260 @@
+/* 
+baby pink RGB(250, 192, 204);
+pink RGB(241, 174, 198); 
+navy RGB(50, 61, 72);
+sage RGB(196, 214, 217);
+mint RGB(232, 243, 226);
+font-family: 'Gugi', cursive;
+font-family: 'Sirin Stencil', cursive;
+*/
+/* small screen */
+@media all and (max-width: 399px){
+    html {
+        background-color: RGB(250, 192, 204);
+        overflow: scroll;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        color: RGB(50, 61, 72);
+    }
+
+    header {
+        text-align: center;
+        background-color: RGB(232, 243, 226);
+        font-family: 'Gugi', cursive;
+        font-size: 1.4em;
+        padding: 0.4em;
+        border: 0.3em solid RGB(241, 174, 198);
+        border-radius: 6px;
+        
+    }
+
+    button {
+        margin-left: 0.3em;
+        background-color: RGB(232, 243, 226);
+        border-color: RGB(50, 61, 72);
+        font-family: 'Gugi', cursive;
+    }
+
+    .search {
+       background-color: RGB(196, 214, 217);
+       padding: 0.4em;
+       display: flex;
+       justify-content: center;
+
+    }
+    .sort {
+        text-align: center;
+        background-color: RGB(232, 243, 226);
+        font-family: 'Gugi', cursive;
+        font-size: 1.4em;
+        padding: 0.4em;
+        border: 0.3em solid RGB(241, 174, 198);
+        border-radius: 6px;
+    }
+    .pokemon {
+        margin: 0.2em auto;
+        margin-top: 1em;
+        background-color: RGB(196, 214, 217);
+        padding: 0.4em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        width: 90vw;
+        border: solid 0.4em RGB(232, 243, 226);
+        border-radius: 0.2em;
+    }
+    .hidden {
+        display: none;
+    }
+    img {
+        margin: auto;
+        width: 80vw;
+    }
+    .name-type {
+        display: flex;
+        justify-content: space-between;
+        padding: 1em;
+        flex-wrap: wrap;
+    }
+    .name-type p {
+        font-size: 1.3em;
+        background-color: RGB(232, 243, 226);
+        padding: 0.2em;
+        border-radius: 0.2em;
+    }
+}
+/* medium screen */
+@media all and (min-width: 400px) and (max-width: 1000px){
+    html {
+        background-color: RGB(250, 192, 204);
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        color: RGB(50, 61, 72);
+    }
+
+    header {
+        width: 93.5vw;
+        text-align: center;
+        background-color: RGB(232, 243, 226);
+        font-family: 'Gugi', cursive;
+        font-size: 2em;
+        padding: 0.4em;
+        border: 0.3em solid RGB(241, 174, 198);
+        border-radius: 6px;
+        
+    }
+    .nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    button {
+        margin-left: 0.3em;
+        background-color: RGB(232, 243, 226);
+        border-color: RGB(50, 61, 72);
+        font-family: 'Gugi', cursive;
+    }
+    .sort, .search {
+        width: 40vw;
+        margin: 0.5em;
+        text-align: center;
+        background-color: RGB(196, 214, 217);
+        font-family: 'Gugi', cursive;
+        font-size: 1.4em;
+        padding: 0.4em;
+        border: 0.3em solid RGB(232, 243, 226);
+        border-radius: 6px;
+    }
+  
+    .pokemon {
+        margin: 0.2em auto;
+        margin-top: 1em;
+        background-color: RGB(196, 214, 217);
+        padding: 0.4em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        width: 40vw;
+        border: solid 0.6em RGB(241, 174, 198);
+        border-radius: 0.2em;
+    }
+    .all-pokemon {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .hidden {
+        display: none;
+    }
+    img {
+        margin: auto;
+        width: 40vw;
+    }
+    .name-type {
+        display: flex;
+        justify-content: space-between;
+        padding: 1em;
+        flex-wrap: wrap;
+    }
+    .name-type p {
+        font-size: 1.3em;
+        background-color: RGB(232, 243, 226);
+        padding: 0.2em;
+        border-radius: 0.2em;
+    }
+}
+
+@media all and (min-width: 1000px) {
+    html {
+        background-color: RGB(250, 192, 204);
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        color: RGB(50, 61, 72);
+    }
+
+    header {
+        width: 93.5vw;
+        text-align: center;
+        background-color: RGB(232, 243, 226);
+        font-family: 'Gugi', cursive;
+        font-size: 2em;
+        padding: 0.4em;
+        border: 0.3em solid RGB(241, 174, 198);
+        border-radius: 6px;
+        
+    }
+    .nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    button {
+        margin-left: 0.3em;
+        background-color: RGB(232, 243, 226);
+        border-color: RGB(50, 61, 72);
+        font-family: 'Gugi', cursive;
+    }
+    .sort, .search {
+        width: 40vw;
+        margin: 0.5em;
+        text-align: center;
+        background-color: RGB(196, 214, 217);
+        font-family: 'Gugi', cursive;
+        font-size: 1.4em;
+        padding: 0.4em;
+        border: 0.3em solid RGB(232, 243, 226);
+        border-radius: 6px;
+    }
+    .pokemon {
+        margin: 0.2em auto;
+        margin-top: 1em;
+        background-color: RGB(196, 214, 217);
+        padding: 0.4em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        width: 20vw;
+        border: solid 0.6em RGB(241, 174, 198);
+        border-radius: 0.2em;
+    }
+    .all-pokemon {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around
+    }
+    .hidden {
+        display: none;
+    }
+    img {
+        margin: auto;
+        width: 20vw;
+    }
+    .name-type {
+        display: flex;
+        justify-content: space-between;
+        padding: 1em;
+        flex-wrap: wrap;
+    }
+    .name-type p {
+        font-size: 1.3em;
+        background-color: RGB(232, 243, 226);
+        padding: 0.2em;
+        border-radius: 0.2em;
+    }
+}

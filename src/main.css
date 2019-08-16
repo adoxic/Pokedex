@@ -8,7 +8,7 @@ font-family: 'Gugi', cursive;
 font-family: 'Sirin Stencil', cursive;
 */
 /* small screen */
-@media all and (max-width: 399px){
+@media all and (max-width: 474px){
     html {
         background-color: RGB(250, 192, 204);
         overflow: scroll;
@@ -54,7 +54,7 @@ font-family: 'Sirin Stencil', cursive;
         border: 0.3em solid RGB(241, 174, 198);
         border-radius: 6px;
     }
-    .pokemon {
+    .onePokemon {
         margin: 0.2em auto;
         margin-top: 1em;
         background-color: RGB(196, 214, 217);
@@ -87,7 +87,7 @@ font-family: 'Sirin Stencil', cursive;
     }
 }
 /* medium screen */
-@media all and (min-width: 400px) and (max-width: 1000px){
+@media all and (min-width: 475px) and (max-width: 1000px){
     html {
         background-color: RGB(250, 192, 204);
         overflow-y: scroll;
@@ -135,7 +135,7 @@ font-family: 'Sirin Stencil', cursive;
         border-radius: 6px;
     }
   
-    .pokemon {
+    .onePokemon {
         margin: 0.2em auto;
         margin-top: 1em;
         background-color: RGB(196, 214, 217);
@@ -221,7 +221,7 @@ font-family: 'Sirin Stencil', cursive;
         border: 0.3em solid RGB(232, 243, 226);
         border-radius: 6px;
     }
-    .pokemon {
+    .onePokemon {
         margin: 0.2em auto;
         margin-top: 1em;
         background-color: RGB(196, 214, 217);

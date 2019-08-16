@@ -8,9 +8,9 @@ class PokemonItem extends Component {
         return /*html*/`
     <li>
         <div class="onePokemon">
-            <img src="${onePokemon.url_image}" alt="${onePokemon.onePokemon}">
+            <img src="${onePokemon.url_image}" alt="${onePokemon.pokemon}">
             <div class="name-type">
-                <p>${onePokemon.onePokemon}</p>
+                <p>${onePokemon.pokemon}</p>
                 <p>${onePokemon.type_1}</p>
                 <p class="hidden">${onePokemon.type_2}</p>
                 <p>Base total: ${onePokemon.special_attack + onePokemon.special_defense + onePokemon.attack + onePokemon.defense + onePokemon.speed + onePokemon.hp}</p>

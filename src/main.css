@@ -236,7 +236,8 @@ font-family: 'Sirin Stencil', cursive;
     .all-pokemon {
         display: flex;
         flex-direction: row;
-        justify-content: space-around
+        justify-content: space-around;
+        flex-wrap: wrap;
     }
     .hidden {
         display: none;

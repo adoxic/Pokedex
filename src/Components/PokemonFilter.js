@@ -5,8 +5,8 @@ class PokemonFilter extends Component {
     onRender(select) {
         const onFilter = this.props.onFilter;
         
-        select.addEventListener('input', (event) => {
-            console.log(select);
+        select.addEventListener('input', () => {
+
             onFilter(select.value);
         });
     }

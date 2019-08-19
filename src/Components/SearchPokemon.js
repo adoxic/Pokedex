@@ -18,7 +18,7 @@ class SearchPokemon extends Component {
 
         window.addEventListener('hashchange', () => {
             input.value = hashStorage.get().search || '';
-        })
+        });
     }
 
     renderHTML() {

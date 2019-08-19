@@ -1,64 +1,70 @@
-import Component from './Component.js';
-import getPokemonData from './pokemon-api.js';
-import hashStorage from './hash-storage.js';
+//import Component from './Component.js';
+// import { getPokemonTypes } from './pokemon-api.js';
+// import hashStorage from './hash-storage.js';
+// STRETCH GOAL IN PROGRESS
+// class PokemonFilter extends Component {
 
-class PokemonFilter extends Component {
-
-    onRender(select) {
-        const onFilter = this.props.onFilter;
+//     onRender() {
+//         const onFilter = this.props.onFilter;
         
-        select.addEventListener('input', () => {
+//         document.addEventListener('select', () => {
 
-            onFilter(select.value);
-        });
-    }
+//             renderOptionsHTML
+//             hashStorage.set({
+//                 type: select,
+//             });
+//         });
+        
+//     }
 
-    async renderHTML() {
-        async function loadPokemonTypes() {
-            
+//     renderHTML() {
+//         async function loadPokemonTypes() {
+//             hashStorage.remove('page');
+//             hashStorage.remove('search');
+//             const options = hashStorage.get();
+//             console.log(options, 'filter');
 
-            const data = await getPokemonData(options);
+//             const data = await getPokemonTypes(options);
           
-            const pokemonTest = data.results;
-            const pokemon = pokemonTest.results;
-            const types = getUniqueTypes(pokemon);
-            const optionsHTML = renderOptionsHTML(types);
+//             const pokemonTest = data.results;
+//             const pokemon = pokemonTest.results;
+//             const types = getUniqueTypes(pokemon);
+//             const optionsHTML = renderOptionsHTML(types);
 
-            return /*html*/`
+//             return /*html*/`
     
-                <select name="type">
-                    <option value="all">All Pokemon</option>
-                    ${optionsHTML}
-                </select>
+//                 <select name="type">
+//                     <option value="all">All Pokemon</option>
+//                     ${optionsHTML}
+//                 </select>
     
-            `;
-        }
-        const htmlResult = await loadPokemonTypes();
-        console.log(htmlResult, 'htmlResult');
-        return htmlResult;
+//             `;
+//         }
+//         return loadPokemonTypes();
 
-    }
-}
+//     }
+// }
 
-function getUniqueTypes(pokemon) {
-    const types = [];
-    pokemon.forEach(onePokemon => {
-        if(!types.includes(onePokemon.type_1)) {
-            types.push(onePokemon.type_1);
-        }
-    });
-    types.sort();
-    return types;
-}
+// function getUniqueTypes(pokemon) {
+//     const types = [];
+//     pokemon.forEach(onePokemon => {
+//         console.log(onePokemon);
+//         if(!types.includes(onePokemon.type_1)) {
+//             types.push(onePokemon.type_1);
+//         }
+//     });
+//     types.sort();
+//     return types;
+// }
 
-function renderOptionsHTML(types) {
-    const optionsArray = types.map(type => {
-        return /*html*/`
-            <option value="${type}">${type}</option>
-        `;
-    });
+// function renderOptionsHTML(types) {
+//     const optionsArray = types.map(type => {
+//         return /*html*/`
+//             <option value="${type}">${type}</option>
+//         `;
+//     });
     
-    return optionsArray.join('');
-}
+//     return optionsArray.join('');
+// }
 
-export default PokemonFilter;
+// export default PokemonFilter;

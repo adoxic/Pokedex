@@ -2,7 +2,7 @@ import Component from '../Components/Component.js';
 import Header from '../Components/Header.js';
 import PokemonList from '../Components/PokemonList.js';
 //import pokemon from '../../pokedex/pokedex-data.js';
-import FilterPokemon from '../Components/PokemonFilter.js';
+//import PokemonFilter from '../Components/PokemonFilter.js';
 import SearchPokemon from '../Components/SearchPokemon.js';
 import getPokemonData from '../Components/pokemon-api.js';
 import Paging from '../Components/Paging.js';
@@ -35,38 +35,18 @@ class App extends Component {
 
             const pokemon = pokemonTest.results;
             
-            const filteredPokemonProps = {
-                pokemon: pokemon,
-                onFilter: (pokeType) => {
-                    let filteredPokemon;
-                    if(pokeType === 'all') {
-                        filteredPokemon = pokemon;
-                    }
-                    else {
-                        filteredPokemon = pokemon.filter(onePokemon => {
-                            return onePokemon.type_1 === pokeType;
-                        });
-                    }
-        
-                    const updateProps = { pokemon: filteredPokemon };
-                    pokemonList.update(updateProps);
-                
-                }
-            };
             pokemonList.update({ pokemon: pokemon });
+            
             paging.update({ 
                 totalCount: totalCount,
                 currentPage: +options.page
             });
-
-
         
-            const filteredPokemon = new FilterPokemon(filteredPokemonProps);
-            const filteredPokemonDOM = filteredPokemon.renderDOM();
-            console.log(filteredPokemonDOM, 'page result')
+            // const filteredPokemon = new PokemonFilter();
+            // const filteredPokemonDOM = filteredPokemon.renderDOM();
 
-            const optionsSection = dom.querySelector('.filter');
-            optionsSection.appendChild(filteredPokemonDOM);
+            // const optionsSection = dom.querySelector('.filter');
+            // optionsSection.appendChild(filteredPokemonDOM);
         }
         
         

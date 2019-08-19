@@ -1,4 +1,6 @@
 import Component from './Component.js';
+import getPokemonData from './pokemon-api.js';
+import hashStorage from './hash-storage.js';
 
 class PokemonFilter extends Component {
 
@@ -11,19 +13,30 @@ class PokemonFilter extends Component {
         });
     }
 
-    renderHTML() {
-        const pokemon = this.props.pokemon;
-        const types = getUniqueTypes(pokemon);
-        const optionsHTML = renderOptionsHTML(types);
+    async renderHTML() {
+        async function loadPokemonTypes() {
+            
 
-        return /*html*/`
+            const data = await getPokemonData(options);
+          
+            const pokemonTest = data.results;
+            const pokemon = pokemonTest.results;
+            const types = getUniqueTypes(pokemon);
+            const optionsHTML = renderOptionsHTML(types);
 
-            <select name="type">
-                <option value="all">All Pokemon</option>
-                ${optionsHTML}
-            </select>
+            return /*html*/`
+    
+                <select name="type">
+                    <option value="all">All Pokemon</option>
+                    ${optionsHTML}
+                </select>
+    
+            `;
+        }
+        const htmlResult = await loadPokemonTypes();
+        console.log(htmlResult, 'htmlResult');
+        return htmlResult;
 
-        `;
     }
 }
 

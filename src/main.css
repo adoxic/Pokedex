@@ -20,6 +20,14 @@ font-family: 'Sirin Stencil', cursive;
         color: RGB(50, 61, 72);
     }
 
+    .paging {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin: 0.5em;
+        text-align: center;
+    }
+
     header {
         text-align: center;
         background-color: RGB(232, 243, 226);
@@ -31,8 +39,8 @@ font-family: 'Sirin Stencil', cursive;
         
     }
 
-    button {
-        margin-left: 0.3em;
+    .prev, .next {
+        color: RGB(50, 61, 72);
         background-color: RGB(232, 243, 226);
         border-color: RGB(50, 61, 72);
         font-family: 'Gugi', cursive;
@@ -100,6 +108,13 @@ font-family: 'Sirin Stencil', cursive;
         color: RGB(50, 61, 72);
     }
 
+    .paging {
+        display: flex;
+        justify-content: space-around;
+        margin: 0.5em;
+        text-align: center;
+    }
+
     header {
         width: 93.5vw;
         text-align: center;
@@ -117,7 +132,7 @@ font-family: 'Sirin Stencil', cursive;
         justify-content: space-around;
     }
 
-    button {
+    .prev, .next {
         margin-left: 0.3em;
         background-color: RGB(232, 243, 226);
         border-color: RGB(50, 61, 72);
@@ -187,6 +202,13 @@ font-family: 'Sirin Stencil', cursive;
         color: RGB(50, 61, 72);
     }
 
+    .paging {
+        display: flex;
+        justify-content: space-around;
+        margin: 0.7em;
+        text-align: center;
+    }
+
     header {
         width: 93.5vw;
         text-align: center;
@@ -204,7 +226,7 @@ font-family: 'Sirin Stencil', cursive;
         justify-content: space-around;
     }
 
-    button {
+    .prev, .next {
         margin-left: 0.3em;
         background-color: RGB(232, 243, 226);
         border-color: RGB(50, 61, 72);
